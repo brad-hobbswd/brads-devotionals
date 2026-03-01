@@ -248,3 +248,61 @@ a:hover{color:var(--gold)}
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:20px;
 }
+.devotion-grid{
+  display:grid;
+  gap:18px;
+  grid-template-columns:repeat(12, 1fr);
+}
+
+.devotion-card{
+  grid-column:span 12;
+  background:var(--panel2);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px;
+  box-shadow:0 10px 26px rgba(0,0,0,.35);
+  transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+
+.devotion-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 35px rgba(200,168,90,.14);
+  border-color:rgba(200,168,90,.40);
+}
+
+.devotion-card h3{
+  margin:0 0 8px;
+  font-size:1.15rem;
+}
+
+.devotion-card p{
+  margin:0 0 12px;
+  color:var(--muted);
+}
+
+.devotion-meta{
+  font-size:.92rem;
+  color:var(--muted);
+  margin:0 0 10px;
+}
+
+.devotion-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+/* 3 across on desktop */
+@media (min-width: 900px){
+  .devotion-card{ grid-column:span 4; }
+}
+
+/* 2 across on tablets */
+@media (min-width: 640px) and (max-width: 899px){
+  .devotion-card{ grid-column:span 6; }
+}
+
+/* 4 across option for very wide screens */
+@media (min-width: 1200px){
+  .devotion-card{ grid-column:span 3; }
+}
