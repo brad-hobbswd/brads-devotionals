@@ -364,3 +364,17 @@ a:hover{color:var(--gold)}
 @media (min-width:1200px){
   .devotion-card{ grid-column:span 3; }
 }
+.hero-small{
+  min-height:220px;
+  padding:40px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  border-bottom:1px solid var(--line);
+  background:
+    linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+    url("assets/images/appalachian-hero.jpg");
+  background-size:cover;
+  background-position:center;
+}
