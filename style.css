@@ -14,12 +14,14 @@
 
 html{
   scroll-behavior:smooth;
+  width:100%;
   max-width:100%;
   overflow-x:hidden;
 }
 
 body{
   margin:0;
+  width:100%;
   max-width:100%;
   overflow-x:hidden;
   color:var(--text);
@@ -175,6 +177,7 @@ a:hover{color:var(--gold)}
   border-radius:var(--radius);
   box-shadow:var(--shadow);
   padding:22px;
+  overflow:hidden;
 }
 
 .card{
@@ -207,6 +210,8 @@ a:hover{color:var(--gold)}
   border:1px solid rgba(200,168,90,.60);
   color:var(--text);
   transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease, color .35s ease;
+  max-width:100%;
+  white-space:normal;
 }
 
 .btn:hover{
@@ -260,6 +265,8 @@ a:hover{color:var(--gold)}
   grid-template-columns:repeat(12, 1fr);
   width:100%;
   max-width:100%;
+  min-width:0;
+  overflow:hidden;
 }
 
 .devotion-card{
@@ -281,6 +288,19 @@ a:hover{color:var(--gold)}
   border-color:rgba(200,168,90,.40);
 }
 
+.devotion-card *{
+  max-width:100%;
+  min-width:0;
+}
+
+.devotion-meta{
+  font-size:.92rem;
+  color:var(--muted);
+  margin:0 0 8px;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+
 .devotion-card h3{
   margin:0 0 8px;
   font-size:1.15rem;
@@ -295,14 +315,6 @@ a:hover{color:var(--gold)}
   word-break:break-word;
 }
 
-.devotion-meta{
-  font-size:.92rem;
-  color:var(--muted);
-  margin:0 0 8px;
-  overflow-wrap:anywhere;
-  word-break:break-word;
-}
-
 .devotion-actions{
   display:flex;
   gap:10px;
@@ -313,11 +325,6 @@ a:hover{color:var(--gold)}
 .devotion-actions a{
   max-width:100%;
   white-space:normal;
-}
-
-.devotion-card *{
-  max-width:100%;
-  min-width:0;
 }
 
 /* Breakpoints for devotion cards */
@@ -352,23 +359,9 @@ a:hover{color:var(--gold)}
 @media (max-width:480px){
   .container{ width:calc(100% - 24px); }
 }
-html, body{
+
+/* Media safety */
+img, svg{
   max-width:100%;
-  overflow-x:hidden;
-}
-
-.devotion-card{
-  min-width:0;
-}
-
-.devotion-card *{
-  min-width:0;
-  max-width:100%;
-}
-
-.devotion-card h3,
-.devotion-card p,
-.devotion-meta{
-  overflow-wrap:anywhere;
-  word-break:break-word;
+  height:auto;
 }
