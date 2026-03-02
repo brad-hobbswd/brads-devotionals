@@ -352,3 +352,23 @@ a:hover{color:var(--gold)}
 @media (max-width:480px){
   .container{ width:calc(100% - 24px); }
 }
+html, body{
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+.devotion-card{
+  min-width:0;
+}
+
+.devotion-card *{
+  min-width:0;
+  max-width:100%;
+}
+
+.devotion-card h3,
+.devotion-card p,
+.devotion-meta{
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
