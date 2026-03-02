@@ -231,6 +231,39 @@ a:hover{color:var(--gold)}
   background-position:0 0, 0 0;
 }
 
+.devotion-grid{
+  display:grid;
+  gap:18px;
+  grid-template-columns:repeat(12, 1fr);
+  width:100%;
+  max-width:100%;
+}
+
+.devotion-card{
+  grid-column:span 12;
+  background:var(--panel2);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px;
+  box-shadow:0 10px 26px rgba(0,0,0,.35);
+  transition:transform .35s ease, box-shadow .35s ease;
+  max-width:100%;
+  min-width:0;
+  overflow:hidden;
+}
+
+@media (min-width:640px){
+  .devotion-card{ grid-column:span 6; }
+}
+
+@media (min-width:900px){
+  .devotion-card{ grid-column:span 4; }
+}
+
+@media (min-width:1200px){
+  .devotion-card{ grid-column:span 3; }
+}
+
 @media (max-width:820px){
   .nav-inner{align-items:flex-start; flex-direction:column}
   .brand{min-width:unset}
@@ -414,4 +447,30 @@ a:hover{color:var(--gold)}
   .container{
     width:calc(100% - 24px);
   }
+}
+html, body{
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+.devotion-card *{
+  min-width:0;
+  max-width:100%;
+}
+
+.devotion-card p,
+.devotion-card h3{
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+
+.devotion-actions{
+  display:flex;
+  flex-wrap:wrap;
+  max-width:100%;
+}
+
+.devotion-actions a{
+  max-width:100%;
+  white-space:normal;
 }
