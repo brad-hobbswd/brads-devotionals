@@ -365,3 +365,67 @@ img, svg{
   max-width:100%;
   height:auto;
 }
+.store-grid{
+  display:grid;
+  grid-template-columns:repeat(12, 1fr);
+  gap:18px;
+  align-items:start;
+}
+
+.store-cover{
+  grid-column:span 12;
+}
+
+.store-details{
+  grid-column:span 12;
+}
+
+.store-cover-img{
+  width:100%;
+  max-width:420px;
+  height:auto;
+  border-radius:14px;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  display:block;
+}
+
+.store-title{
+  margin:0 0 10px;
+  font-size:1.6rem;
+}
+
+.store-note{
+  margin:0 0 12px;
+  color:var(--muted);
+}
+
+.store-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:0 0 16px;
+}
+
+.store-badge{
+  border:1px solid rgba(200,168,90,.60);
+  color:var(--gold);
+  border-radius:999px;
+  padding:6px 12px;
+  font-size:.95rem;
+}
+
+.store-actions{
+  margin:0 0 12px;
+}
+
+.store-fineprint{
+  margin:0;
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+@media (min-width:900px){
+  .store-cover{ grid-column:span 5; }
+  .store-details{ grid-column:span 7; }
+}
