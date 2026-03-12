@@ -470,11 +470,19 @@ img, svg{
 
 .grid{
   display:grid;
-  gap:18px;
-  grid-template-columns:repeat(12, 1fr);
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  align-items:start;
   padding:24px 0 70px;
 }
-
+.grid .panel{
+  grid-column:auto;
+}
+@media (max-width:768px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
 /* Devotion page article width */
 
 .grid{
@@ -485,4 +493,16 @@ img, svg{
 .grid .panel{
   max-width:760px;
   width:100%;
+}
+/* Devotion page two column layout */
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  align-items:start;
+}
+
+.grid .panel{
+  grid-column:auto;
 }
