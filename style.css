@@ -331,11 +331,9 @@ a:hover{color:var(--gold)}
 /* Story Time card styling */
 
 .story-card{
-  margin-top:22px;
   padding:22px;
   background:var(--panel2);
   border:1px solid var(--line);
-  border-left:4px solid var(--gold);
   border-radius:var(--radius);
   box-shadow:var(--shadow);
 }
@@ -485,23 +483,10 @@ img, svg{
 }
 /* Devotion page article width */
 
-.grid{
-  display:flex;
-  justify-content:center;
-}
 
-.grid .panel{
-  max-width:760px;
-  width:100%;
-}
 /* Devotion page two column layout */
 
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:22px;
-  align-items:start;
-}
+
 
 .grid .panel{
   grid-column:auto;
