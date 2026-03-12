@@ -411,13 +411,14 @@ img, svg{
     grid-template-columns:1fr;
   }
 }
-/* Devotion page article width */
-
-
-/* Devotion page two column layout */
-
-
-
 .grid .panel{
   grid-column:auto;
+}
+
+/* Devotions index grid only */
+
+.devotion-index .devotion-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:18px;
 }
