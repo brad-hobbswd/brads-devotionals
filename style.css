@@ -280,7 +280,7 @@ a:hover{color:var(--gold)}
 
 .devotion-index .devotion-grid{
   display:grid;
-  grid-template-columns:repeat(12, 1fr);
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
   gap:18px;
 }
 
@@ -312,17 +312,7 @@ img, svg{
 }
 
 /* Breakpoints for devotion cards */
-@media (min-width:640px){
-  .devotion-card{ grid-column:span 6; }
-}
 
-@media (min-width:900px){
-  .devotion-card{ grid-column:span 4; }
-}
-
-@media (min-width:1200px){
-  .devotion-card{ grid-column:span 3; }
-}
 @media (max-width:768px){
   .grid{
     grid-template-columns:1fr;
