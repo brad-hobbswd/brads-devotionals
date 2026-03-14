@@ -276,33 +276,17 @@ a:hover{color:var(--gold)}
   box-shadow:0 12px 35px rgba(200,168,90,.14);
 }
 
-/* Devotion grid layout */
+/* Devotion index layout */
 
 .devotion-index .devotion-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-  gap:18px;
+  gap:20px;
+  margin-top:20px;
 }
 
-/* Tablet */
-@media (min-width:640px){
-  .devotion-card{
-    grid-column:span 6;
-  }
-}
-
-/* Desktop */
-@media (min-width:900px){
-  .devotion-card{
-    grid-column:span 4;
-  }
-}
-
-/* Large screens */
-@media (min-width:1200px){
-  .devotion-card{
-    grid-column:span 3;
-  }
+.devotion-index .devotion-card{
+  width:100%;
 }
 
 /* Media safety */
@@ -313,11 +297,7 @@ img, svg{
 
 /* Breakpoints for devotion cards */
 
-@media (max-width:768px){
-  .grid{
-    grid-template-columns:1fr;
-  }
-}
+
 @media (max-width:768px){
   .hero{padding:52px 16px 66px; min-height:56vh}
   .hero-inner{padding:20px 16px}
@@ -411,12 +391,4 @@ img, svg{
 @media (min-width:900px){
   .store-cover{ grid-column:span 5; }
   .store-details{ grid-column:span 7; }
-}
-
-/* Devotions index grid only */
-
-.devotion-index .devotion-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-  gap:18px;
 }
