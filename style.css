@@ -424,3 +424,10 @@ img, svg{
   .store-cover{ grid-column:span 5; }
   .store-details{ grid-column:span 7; }
 }
+
+body{
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+}
