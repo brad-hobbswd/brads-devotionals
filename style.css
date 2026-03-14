@@ -10,6 +10,14 @@
   --radius:18px;
 }
 
+body{
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+}
+
+
 *{box-sizing:border-box}
 
 html{
@@ -304,6 +312,10 @@ a:hover{color:var(--gold)}
   padding-bottom:60px;
 }
 
+.devotion-content{
+  user-select:none;
+}
+
 /* Tablet */
 @media (min-width:600px){
   .devotion-index .devotion-grid{
@@ -386,6 +398,11 @@ img, svg{
   display:block;
 }
 
+img{
+  pointer-events:none;
+  -webkit-user-drag:none;
+}
+
 .store-title{
   margin:0 0 10px;
   font-size:1.6rem;
@@ -425,9 +442,3 @@ img, svg{
   .store-details{ grid-column:span 7; }
 }
 
-body{
-  user-select:none;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-}
