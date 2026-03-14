@@ -276,6 +276,35 @@ a:hover{color:var(--gold)}
   box-shadow:0 12px 35px rgba(200,168,90,.14);
 }
 
+/* Devotion grid layout */
+
+.devotion-index .devotion-grid{
+  display:grid;
+  grid-template-columns:repeat(12, 1fr);
+  gap:18px;
+}
+
+/* Tablet */
+@media (min-width:640px){
+  .devotion-card{
+    grid-column:span 6;
+  }
+}
+
+/* Desktop */
+@media (min-width:900px){
+  .devotion-card{
+    grid-column:span 4;
+  }
+}
+
+/* Large screens */
+@media (min-width:1200px){
+  .devotion-card{
+    grid-column:span 3;
+  }
+}
+
 /* Media safety */
 img, svg{
   max-width:100%;
