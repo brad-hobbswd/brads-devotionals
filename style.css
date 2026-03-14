@@ -280,13 +280,35 @@ a:hover{color:var(--gold)}
 
 .devotion-index .devotion-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
   gap:20px;
   margin-top:20px;
+  grid-template-columns:1fr;
 }
 
-.devotion-index .devotion-card{
-  width:100%;
+.devotion-card h3{
+  font-size:1.1rem;
+  line-height:1.35;
+}
+
+/* Tablet */
+@media (min-width:600px){
+  .devotion-index .devotion-grid{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+
+/* Small desktop */
+@media (min-width:900px){
+  .devotion-index .devotion-grid{
+    grid-template-columns:repeat(3, 1fr);
+  }
+}
+
+/* Large screens – four across */
+@media (min-width:1200px){
+  .devotion-index .devotion-grid{
+    grid-template-columns:repeat(4, 1fr);
+  }
 }
 
 /* Media safety */
@@ -325,10 +347,6 @@ img, svg{
 }
 
 /* Media safety */
-img, svg{
-  max-width:100%;
-  height:auto;
-}
 .store-grid{
   display:grid;
   grid-template-columns:repeat(12, 1fr);
