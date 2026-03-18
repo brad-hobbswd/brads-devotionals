@@ -290,7 +290,11 @@ const isMobile = window.innerWidth < 768;
 
 function createPage(c){
   const p=document.createElement("div");
-  p.classList.add("page");
+p.classList.add("page");
+
+if(c.type==="cover"){
+  p.setAttribute("data-density","hard");
+}
 
   if(c.type==="cover"){
   p.innerHTML=`
