@@ -249,15 +249,33 @@ function closeBook(){
 
 /* YOUR BOOK CONTENT */
 const content = [
+
   {type:"cover"},
+
   {type:"title",title:"Whispers in the Pew",author:"Bradley Hobbs"},
+
   {type:"section",title:"Faith & Trust"},
-  {type:"devotion",title:"The Road I Know",body:"God meets those who seek Him sincerely."},
-  {type:"devotion",title:"Trusting the Process",body:"Even when unseen, God is working."},
-  {type:"section",title:"Healing & Wholeness"},
-  {type:"devotion",title:"The Strength to Be Broken",body:"Brokenness becomes healing in God's hands."},
+
+  {type:"page", iframe:"faith-that-became-mine.html"},
+  {type:"page", iframe:"the-road-i-know.html"},
+  {type:"page", iframe:"trusting-the-process-part-1.html"},
+  {type:"page", iframe:"trusting-the-process-part-2.html"},
+  {type:"page", iframe:"mind-over-matter-part-1.html"},
+  {type:"page", iframe:"mind-over-matter-part-2.html"},
+  {type:"page", iframe:"faith-over-fear.html"},
+  {type:"page", iframe:"when-fear-meets-faith.html"},
+  {type:"page", iframe:"faith-not-just-rules.html"},
+  {type:"page", iframe:"when-their-faith-feels-distant.html"},
+  {type:"page", iframe:"Trust-Beyond-Understanding.html"},
+  {type:"page", iframe:"Too-Big-to-Sink.html"},
+  {type:"page", iframe:"You-Dont-Have-to-Beg.html"},
+  {type:"page", iframe:"God Can and God Will.html"},
+  {type:"page", iframe:"Continuing-in-the-Word.html"},
+  {type:"page", iframe:"When-the-Foolish-Become-Favored.html"},
+
   {type:"cover"}
-];
+
+]; 
 
 const book = document.getElementById("book");
 
@@ -277,9 +295,16 @@ function createPage(c){
     p.innerHTML=`<h2>${c.title}</h2>`;
   }
 
-  if(c.type==="devotion"){
-    p.innerHTML=`<h2>${c.title}</h2><p>${c.body}</p>`;
-  }
+  if(c.type==="page"){
+  p.innerHTML = `
+    <iframe src="${c.iframe}" style="
+      width:100%;
+      height:100%;
+      border:none;
+      background:#fff;
+    "></iframe>
+  `;
+}
 
   return p;
 }
