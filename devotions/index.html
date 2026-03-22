@@ -34,10 +34,7 @@
   <div class="hero-inner">
     <h1 class="h1">Devotions</h1>
     <p class="tagline">Quiet readings for candlelit moments.</p>
-    <div style="margin-top:20px;">
-  <button onclick="openBook()" class="btn">📖 Read as Book</button>
-  <button onclick="closeBook()" class="btn" style="display:none;" id="closeBtn">← Back</button>
-</div>
+    
   </div>
 </section>
 
@@ -452,23 +449,7 @@
 
 
   </div>
-<div id="bookSection" style="
-  display:none;
-  min-height:80vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  margin-top:40px;
-">
-  <div id="book"></div>
 
-  <div style="text-align:center; margin-top:20px;">
-    <button onclick="prevPage()">◀</button>
-    <span id="pageNum"></span>
-    <button onclick="nextPage()">▶</button>
-  </div>
-</div>
 </main>
   
 <footer class="footer">
@@ -495,131 +476,6 @@ document.addEventListener("keydown", function(e) {
   }
 });
 </script>
-  <script src="https://unpkg.com/page-flip/dist/js/page-flip.browser.js"></script>
-
-<script>
-function openBook(){
-  document.getElementById("devotionsGrid").style.display="none";
-  document.getElementById("bookSection").style.display="block";
-  document.getElementById("closeBtn").style.display="inline-block";
-}
-
-function closeBook(){
-  document.getElementById("devotionsGrid").style.display="grid";
-  document.getElementById("bookSection").style.display="none";
-  document.getElementById("closeBtn").style.display="none";
-}
-
-/* YOUR BOOK CONTENT */
-const content = [
-
-  {type:"cover"},
-
-  {type:"section",title:"Faith & Trust"},
-
-  {type:"page", iframe:"faith-that-became-mine.html"},
-  {type:"page", iframe:"the-road-i-know.html"},
-  {type:"page", iframe:"trusting-the-process-part-1.html"},
-  {type:"page", iframe:"trusting-the-process-part-2.html"},
-  {type:"page", iframe:"mind-over-matter-part-1.html"},
-  {type:"page", iframe:"mind-over-matter-part-2.html"},
-  {type:"page", iframe:"faith-over-fear.html"},
-  {type:"page", iframe:"when-fear-meets-faith.html"},
-  {type:"page", iframe:"faith-not-just-rules.html"},
-  {type:"page", iframe:"when-their-faith-feels-distant.html"},
-  {type:"page", iframe:"Trust-Beyond-Understanding.html"},
-  {type:"page", iframe:"Too-Big-to-Sink.html"},
-  {type:"page", iframe:"You-Dont-Have-to-Beg.html"},
-  {type:"page", iframe:"God Can and God Will.html"},
-  {type:"page", iframe:"Continuing-in-the-Word.html"},
-  {type:"page", iframe:"When-the-Foolish-Become-Favored.html"},
-
-
-]; 
-
-const book = document.getElementById("book");
-const isMobile = window.innerWidth < 768;
-
-function createPage(c){
-  const p=document.createElement("div");
-p.classList.add("page");
-
-if(c.type==="cover"){
-  p.setAttribute("data-density","hard");
-}
-
-  if(c.type==="cover"){
-  p.innerHTML=`
-    <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
-      <img src="../assets/images/book-cover.jpg.png" style="
-          max-width:100%;
-  max-height:100%;
-  object-fit:contain;
-">
-    </div>
-  `;
-}
-
-  if(c.type==="title"){
-    p.innerHTML=`<h1>${c.title}</h1><h3>${c.author}</h3>`;
-  }
-
-  if(c.type==="section"){
-    p.innerHTML=`<h2>${c.title}</h2>`;
-  }
-
-  if(c.type==="page"){
-  p.innerHTML = `
-    <iframe src="${c.iframe}?book=true&v=${Date.now()}" style="
-      width:100%;
-      height:100%;
-      border:none;
-      background:#0b0b0b;
-    "></iframe>
-  `;
-}
-
-  return p;
-}
-
-content.forEach(x=>book.appendChild(createPage(x)));
-
-let pageFlip;
-
-if(!isMobile){
-
-  pageFlip = new St.PageFlip(book,{
-    width:800,
-    height:1000,
-    size:"stretch",
-    minWidth:315,
-    maxWidth:1000,
-    minHeight:420,
-    maxHeight:1200,
-    showCover:true
-  });
-
-  pageFlip.loadFromHTML(document.querySelectorAll(".page"));
-
-}else{
-
-  // 📱 MOBILE MODE (NO FLIP, JUST SCROLL)
-  document.getElementById("book").style.display = "block";
-
-  document.querySelectorAll(".page").forEach(p=>{
-    p.style.marginBottom = "25px";
-    p.style.height = "auto";
-  });
-
-}
-
-function nextPage(){pageFlip.flipNext();}
-function prevPage(){pageFlip.flipPrev();}
-function flip(){pageFlip.flipNext();}
-
-pageFlip.on("flip",(e)=>{
-  document.getElementById("pageNum").innerText="Page "+(e.data+1);
-});
-</script>
+ 
 </body>
 </html>
