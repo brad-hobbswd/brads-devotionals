@@ -306,6 +306,8 @@ a:hover{color:var(--gold)}
 }
 
 .category-card{
+  grid-column: 1 / -1; /* 🔥 THIS is the key */
+
   background: linear-gradient(
     180deg,
     rgba(200,168,90,.10),
@@ -316,15 +318,23 @@ a:hover{color:var(--gold)}
   border-top:3px solid var(--gold);
 
   border-radius:14px;
-  padding:18px;
+  padding:22px; /* 👈 slightly larger than devotions */
 
-  box-shadow:0 10px 26px rgba(0,0,0,.35);
+  box-shadow:0 14px 40px rgba(200,168,90,.18);
 
   display:flex;
   flex-direction:column;
   justify-content:space-between;
 
   transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.category-card h3{
+  font-size:1.4rem;
+}
+
+.category-desc{
+  font-size:15px;
 }
 
 .category-badge{
