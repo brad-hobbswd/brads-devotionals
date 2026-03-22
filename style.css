@@ -344,6 +344,11 @@ a:hover{color:var(--gold)}
   opacity:.7;
 }
 
+.grid-break{
+  grid-column: 1 / -1;
+  height: 10px;
+}
+
 /* Devotion index layout */
 
 .devotion-index .devotion-grid{
