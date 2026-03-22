@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Foreword | Whispers in the Pew</title>
-<meta name="description" content="A foreword speaking to the heart and impact of Whispers in the Pew and the journey behind it.">
+<meta name="description" content="A reflection on the heart and purpose behind these devotions.">
 <link rel="stylesheet" href="../style.css">
 <link rel="icon" href="../favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
@@ -20,7 +20,7 @@
       <span>Whispers in the Pew</span>
     </a>
     <nav class="links" aria-label="Primary">
-      <a href="../devotions/index.html">Devotions</a>
+      <a href="index.html">Devotions</a>
       <a href="../prayer-room.html">Prayer Room</a>
       <a href="../about.html">About</a>
       <a href="../store.html">Store</a>
@@ -34,30 +34,26 @@
   url('../assets/images/appalachian-hero.jpg');">
   <div class="hero-inner">
     <h1 class="h1">Foreword</h1>
-    <p class="tagline">A voice that speaks over the journey</p>
+    <p class="tagline">A word before the journey begins</p>
   </div>
 </section>
 
 <main class="container">
   <div class="grid">
 
-    <!-- FOREWORD PANEL -->
     <article class="panel prose">
 
-      <p>Whispers in the Pew is a devotional unlike many others. Rather than being confined to structure or expectation, these writings flow as an offering of love to the True and Living God, shaped through the hearts of those devoted to Him.</p>
+      <p>Whispers in The Pew is a devotional like no other. It is not bound by religion or doctrine but is instead an offering of love to the True and Living God, flowing from the hearts of His devoted servants.</p>
 
-      <p>Within these pages, Bradley emerges as a passionate servant who has chosen to give voice to what has stirred deeply within his spirit. Through a journey marked by longing, love, searching, and growth, these devotions were formed. Each one reaches into the depth of human experience, helping readers recognize and understand those same places within themselves.</p>
+      <p>Among them is Bradley, a passionate servant who has chosen to put into writing the voice stirring within his heart. Out of a journey marked by longing, loving, searching, and teaching, these devotions were born. They reach the core of human experience, helping us recognize and understand those same deep feelings within ourselves.</p>
 
-      <p>Allow these words to settle into your heart. Let them move you, shape you, and lift you into deeper places in your walk with God. Memories may surface of seasons when closeness with Him felt natural and strong. Let these devotions serve as a gentle call back to that place.</p>
+      <p>Absorb these devotions into your heart. Allow them to move you, to change you, and to lift you to new places in your walk with God. Perhaps they will remind you of a time when you once felt close to Him but drifted away. Let these words call you back to your first love.</p>
 
-      <p>The intention behind these writings is clear, to guide hearts along a path of spiritual growth and deeper relationship with God. These reflections were written through prayer and leading of the Spirit, carrying a hope that something eternal would be awakened within each reader.</p>
+      <p>I know Bradley’s intention is to help guide you along the path of Christian growth. He felt led by the Holy Spirit to write and share these reflections. Every word has been prayed over with the hope that it will stir something eternal within you. Expect to weep tears of joy, of sorrow, and of release as you move through each devotion and story, because they will draw you nearer to the Lord.</p>
 
-      <p>Moments of joy, sorrow, and release may rise as you move through each devotion and story. Such moments are not accidental. They reflect the drawing power of God, bringing hearts nearer to Him with each page.</p>
+      <p>May these writings bless you as richly as they have blessed me.</p>
 
-      <p>May these writings bless you as deeply as they have already blessed others.</p>
-
-      <p><b>With gratitude,</b><br>
-      Vickie Elkins</p>
+      <p><b>Vickie Elkins</b></p>
 
     </article>
 
@@ -69,6 +65,47 @@
     <p>© 2026 Whispers in the Pew</p>
   </div>
 </footer>
+
+<script>
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+});
+</script>
+
+<script>
+document.addEventListener("keydown", function(e) {
+  if (
+    (e.ctrlKey && e.key === "c") ||
+    (e.ctrlKey && e.key === "x") ||
+    (e.ctrlKey && e.key === "u") ||
+    (e.ctrlKey && e.key === "s")
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+
+<script>
+(function(){
+  function enableBookMode(){
+    document.querySelectorAll("header, footer, .nav")
+      .forEach(el => el.remove());
+
+    document.body.style.background = "#080604";
+    document.body.style.color = "#f4e7cf";
+    document.body.style.margin = "0";
+    document.body.style.padding = "40px 30px";
+    document.body.style.maxWidth = "700px";
+    document.body.style.margin = "0 auto";
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  if(params.get("book") === "true"){
+    enableBookMode();
+  }
+})();
+</script>
 
 </body>
 </html>
