@@ -309,6 +309,14 @@ a:hover{color:var(--gold)}
   transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
 }
 
+.category-card{
+  grid-column: span 2;
+}
+
+.category-card{
+  border-top: 3px solid var(--gold);
+}
+
 .category-card:hover{
   transform:scale(1.05);
   border-color:rgba(200,168,90,.75);
@@ -330,6 +338,22 @@ a:hover{color:var(--gold)}
 
 .category-actions .btn{
   border-color:rgba(200,168,90,.9);
+}
+
+.category-card{
+  background: linear-gradient(
+    180deg,
+    rgba(200,168,90,.12),
+    rgba(200,168,90,.02)
+  ), var(--panel2);
+}
+
+.category-sub{
+  display:block;
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:8px;
+  opacity:.7;
 }
 
 /* Devotion index layout */
