@@ -4,23 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Forgiveness & Redemption | Whispers in the Pew</title>
-<meta name="description" content="A journey into forgiveness, release, and redemption through the restoring grace of Jesus.">
+<meta name="description" content="A journey of forgiveness, healing, and redemption through Jesus.">
 <link rel="stylesheet" href="../style.css">
 <link rel="icon" href="../favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
-<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
 </head>
+
 <body>
 
 <header class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="../index.html" aria-label="Home">
+    <a class="brand" href="../index.html">
       <img src="../assets/images/logo-256.png" alt="Whispers in the Pew">
       <span>Whispers in the Pew</span>
     </a>
-    <nav class="links" aria-label="Primary">
-      <a href="../devotions/index.html">Devotions</a>
+    <nav class="links">
+      <a href="index.html">Devotions</a>
       <a href="../prayer-room.html">Prayer Room</a>
       <a href="../about.html">About</a>
       <a href="../store.html">Store</a>
@@ -30,27 +28,61 @@
 </header>
 
 <section class="hero-small" style="background:
-  linear-gradient(rgba(0,0,0,.76), rgba(0,0,0,.76)),
-  url('../assets/images/appalachian-hero.jpg');">
+linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+url('../assets/images/appalachian-hero.jpg');">
   <div class="hero-inner">
     <h1 class="h1">Forgiveness & Redemption</h1>
-    <p class="tagline">Freedom begins where grace meets what hurt</p>
+    <p class="tagline">A journey of release, healing, and restoration</p>
   </div>
 </section>
 
-<main class="container">
-  <div class="grid">
+<main class="container devotion-index">
 
-    <!-- CATEGORY INTRO CARD -->
-    <article class="panel prose">
-      <p>Forgiveness stands among the most demanding acts of obedience, carrying sacred weight through its call to release what caused the deepest hurt and to trust God with healing beyond the reach of human justice. This journey invites honesty about pain, courage to face resentment, and faith to believe that restoration remains possible even within places that feel beyond repair.</p>
+  <!-- BACK -->
+  <div style="margin-top:20px;">
+    <a href="index.html" class="btn">← Back to Devotions</a>
+  </div>
 
-      <p>Redemption does not seek to rewrite the past, choosing instead to reclaim the future through grace that meets regret without fear. When mercy encounters shame, God restores what once seemed buried and unreachable.</p>
+  <!-- INTRO -->
+  <section class="chapter-intro">
+    <p>
+      Forgiveness is not always easy, and redemption is not something the heart naturally chooses.
+      There are moments where pain feels justified, where wounds run deep,
+      and where letting go seems impossible.
+    </p>
+    <p>
+      Yet Jesus meets those moments with mercy and truth. These devotions walk through
+      the process of release, healing, and stepping into the freedom that comes through Him.
+    </p>
+  </section>
 
-      <p>These pages exist to guide hearts toward freedom, offering courage to turn toward mercy, strength to lay down bitterness, and hope to embrace the liberty found through forgiveness.</p>
-    </article>
+  <!-- DEVOTIONS -->
+  <div class="devotion-grid">
+
+    <article class="devotion-card"><p class="devotion-meta">John 6:37</p><h3>The Difference Is in the Turn</h3><a class="btn" href="TheDifferenceIsInTheTurn.html">Read</a></article>
+
+    <article class="devotion-card"><p class="devotion-meta">Matthew 5:39</p><h3>The Power to Turn</h3><a class="btn" href="ThePowerToTurn.html">Read</a></article>
+
+    <article class="devotion-card"><p class="devotion-meta">Proverbs 26:11</p><h3>Like a Dog Returning to Its Vomit</h3><a class="btn" href="LikeADogReturningToItsVomit.html">Read</a></article>
+
+    <article class="devotion-card"><p class="devotion-meta">Proverbs 4:23</p><h3>Forgiveness Doesn’t Always Mean Access</h3><a class="btn" href="ForgivenessDoesntAlwaysMeanAccess.html">Read</a></article>
+
+    <article class="devotion-card"><p class="devotion-meta">John 8:31-32</p><h3>The Truth That Sets You Free</h3><a class="btn" href="TheTruthThatSetsYouFree.html">Read</a></article>
+
+    <article class="devotion-card"><p class="devotion-meta">Isaiah 1:18</p><h3>The God Who Sees and Still Saves</h3><a class="btn" href="TheGodWhoSeesAndStillSaves.html">Read</a></article>
+
+    <article class="devotion-card"><p class="devotion-meta">Isaiah 54:17</p><h3>No Permission to Prosper</h3><a class="btn" href="NoPermissionToProsper.html">Read</a></article>
+
+    <article class="devotion-card"><p class="devotion-meta">Proverbs 18:21</p><h3>Poison or Medicine</h3><a class="btn" href="PoisonOrMedicine.html">Read</a></article>
+
+    <article class="devotion-card"><p class="devotion-meta">Revelation 12:11</p><h3>Your Testimony is Someone’s Medicine</h3><a class="btn" href="your-testimony-is-someones-medicine.html">Read</a></article>
+
+    <article class="devotion-card"><p class="devotion-meta">John 4:13–14</p><h3>He Came for You</h3><a class="btn" href="he-came-for-you.html">Read</a></article>
+
+    <article class="devotion-card"><p class="devotion-meta">Ezekiel 34:2</p><h3>When Leaders Lie and You Know It</h3><a class="btn" href="when-leaders-lie-and-you-know-it.html">Read</a></article>
 
   </div>
+
 </main>
 
 <footer class="footer">
@@ -58,28 +90,6 @@
     <p>© 2026 Whispers in the Pew</p>
   </div>
 </footer>
-
-<script>
-(function(){
-  function enableBookMode(){
-    document.querySelectorAll("header, footer, .nav")
-      .forEach(el => el.remove());
-
-    document.body.style.background = "#080604";
-    document.body.style.color = "#f4e7cf";
-    document.body.style.margin = "0";
-    document.body.style.padding = "40px 30px";
-    document.body.style.maxWidth = "700px";
-    document.body.style.margin = "0 auto";
-  }
-
-  const params = new URLSearchParams(window.location.search);
-
-  if(params.get("book") === "true"){
-    enableBookMode();
-  }
-})();
-</script>
 
 </body>
 </html>
