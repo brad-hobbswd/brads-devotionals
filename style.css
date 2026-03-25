@@ -395,6 +395,10 @@ background: linear-gradient(
   line-height:1.35;
 }
 
+.devotion-card h3 {
+  font-weight: 600;
+}
+
 .devotion-card{
   cursor:pointer;
 }
