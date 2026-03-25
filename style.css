@@ -548,3 +548,29 @@ body[style*="background: #ffffff"] .hero-inner h1 {
 body[style*="background: #ffffff"] .tagline {
   color: #555;
 }
+
+.chapter-intro {
+  grid-column: 1 / -1;
+  max-width: 720px;
+  margin: 10px auto 30px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.chapter-intro p {
+  margin-bottom: 12px;
+}
+
+.devotion-card .btn {
+  margin-top: auto;
+}
+
+.back-link {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.devotion-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(200,168,90,.18);
+}
