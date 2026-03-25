@@ -306,9 +306,7 @@ a:hover{color:var(--gold)}
 }
 
 .category-card{
-  grid-column: 1 / -1; /* 🔥 THIS is the key */
-
-  background: linear-gradient(
+background: linear-gradient(
     180deg,
     rgba(200,168,90,.10),
     rgba(200,168,90,.02)
@@ -327,6 +325,14 @@ a:hover{color:var(--gold)}
   justify-content:space-between;
 
   transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.chapters .devotion-grid {
+  margin-top: 10px;
+}
+
+.chapters .devotion-grid {
+  margin-top: 10px;
 }
 
 .category-card h3{
