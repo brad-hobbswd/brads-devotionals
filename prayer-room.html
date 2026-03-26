@@ -38,17 +38,41 @@
 
 <main class="container">
   <div class="grid">
-    <section class="panel prose">
-      <h2>Light a candle</h2>
-      <p>Stillness can hold faith steady.</p>
-      <blockquote>Jesus, draw near. Bring peace. Lead my heart.</blockquote>
-    </section>
+    <section class="panel prose" id="prayer-experience">
+  <h2>Begin Prayer</h2>
+  <p>You are welcome here. Jesus is near.</p>
 
-    <section class="panel prose">
-      <h2>Scripture</h2>
-      <blockquote>Psalm 27:4</blockquote>
-      <p>One thing have I desired of the Lord, that will I seek after; that I may dwell in the house of the Lord all the days of my life.</p>
-    </section>
+  <div id="start">
+    <button onclick="startPrayerFlow()">Begin</button>
+  </div>
+
+  <div id="step1" class="hidden">
+    <p>Take a slow breath. Let your thoughts settle.</p>
+  </div>
+
+  <div id="step2" class="hidden">
+    <p><strong>Matthew 7:8</strong></p>
+    <p>For every one that asketh receiveth.</p>
+    <p>Speak honestly to Jesus right now.</p>
+  </div>
+
+  <div id="step3" class="hidden">
+    <textarea id="prayerBox" placeholder="Write your prayer here..."></textarea>
+    <br><br>
+    <button onclick="releasePrayer()">Release Prayer</button>
+  </div>
+
+  <div id="step4" class="hidden">
+    <p>Remain here for a moment with Jesus.</p>
+    <button onclick="startSilence(60)">Sit quietly for 1 minute</button>
+    <p id="timer"></p>
+  </div>
+
+  <div id="end" class="hidden">
+    <p>Your prayer was heard.</p>
+    <p>You can return here anytime.</p>
+  </div>
+</section>
   </div>
 </main>
 
