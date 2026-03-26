@@ -72,6 +72,7 @@
     <p>Your prayer was heard.</p>
     <p>You can return here anytime.</p>
   </div>
+  <div id="savedPrayers" style="margin-top:20px;"></div>
 </section>
   </div>
 </main>
@@ -118,10 +119,48 @@ function startPrayerFlow() {
   }, 4000);
 }
 
+function savePrayer(text) {
+  let prayers = JSON.parse(localStorage.getItem("prayers")) || [];
+
+  prayers.unshift({
+    text: text,
+    time: new Date().toLocaleString()
+  });
+
+  localStorage.setItem("prayers", JSON.stringify(prayers));
+}
+
+function loadPrayers() {
+  const container = document.getElementById("savedPrayers");
+  if (!container) return;
+
+  let prayers = JSON.parse(localStorage.getItem("prayers")) || [];
+
+  container.innerHTML = "";
+
+  prayers.slice(0, 5).forEach(p => {
+    let div = document.createElement("div");
+    div.style.marginBottom = "12px";
+    div.style.padding = "10px";
+    div.style.border = "1px solid rgba(200,168,90,.2)";
+    div.style.borderRadius = "8px";
+    div.style.color = "var(--muted)";
+
+    div.innerHTML = `
+      <div style="font-size:.85rem; opacity:.6;">${p.time}</div>
+      <div>${p.text}</div>
+    `;
+
+    container.appendChild(div);
+  });
+}
+
 function releasePrayer() {
   const box = document.getElementById("prayerBox");
 
   if (!box.value.trim()) return;
+
+  savePrayer(box.value);
 
   box.classList.add("fade-out");
 
@@ -129,6 +168,8 @@ function releasePrayer() {
     box.value = "";
     box.classList.remove("fade-out");
     document.getElementById("step4").classList.remove("hidden");
+
+    loadPrayers();
   }, 2000);
 }
 
@@ -151,6 +192,8 @@ function startSilence(seconds) {
     }
   }, 1000);
 }
+
+document.addEventListener("DOMContentLoaded", loadPrayers);
 </script>
 </body>
 </html>
