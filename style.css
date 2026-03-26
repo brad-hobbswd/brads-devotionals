@@ -584,3 +584,12 @@ body[style*="background: #ffffff"] .tagline {
   transform: translateY(-4px);
   box-shadow: 0 14px 40px rgba(200,168,90,.18);
 }
+
+/* Fix spacing for single devotion pages */
+main.container .panel{
+  margin-bottom:60px;
+}
+
+main.container{
+  min-height:70vh;
+}
