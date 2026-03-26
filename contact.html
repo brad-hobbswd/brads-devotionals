@@ -38,11 +38,35 @@
 
 <main class="container">
   <div class="grid">
-    <section class="panel prose">
-      <h2>Message</h2>
-      <p>Email contact can be added here when ready.</p>
-      <p>Social links can be added here when ready.</p>
-    </section>
+    <section class="panel prose" style="max-width:600px; margin:0 auto; text-align:center;">
+
+  <h2>You are welcome here</h2>
+
+  <p>You can share what is on your heart. You are not alone.</p>
+
+  <p style="color:var(--muted); font-size:.95rem;">
+    You will not be dismissed. Your voice matters.
+  </p>
+
+  <div style="margin:20px 0;">
+    <button class="btn" onclick="setMode('prayer')">I need prayer</button>
+    <button class="btn" onclick="setMode('talk')">I need to talk</button>
+    <button class="btn" onclick="setMode('question')">I have a question</button>
+  </div>
+
+  <textarea id="messageBox" placeholder="Share what is on your heart..."></textarea>
+
+  <br><br>
+
+  <button class="btn" onclick="sendMessage()">Send</button>
+
+  <p style="color:var(--muted); font-size:.85rem; margin-top:12px;">
+    Share only what you feel comfortable sharing.
+  </p>
+
+  <div id="confirmation" style="margin-top:18px; color:var(--muted);"></div>
+
+</section>
   </div>
 </main>
 
@@ -70,6 +94,37 @@ document.addEventListener("keydown", function(e) {
   }
 });
 </script>
-  
+  <script>
+let currentMode = "";
+
+function setMode(mode) {
+  currentMode = mode;
+
+  const box = document.getElementById("messageBox");
+
+  if (mode === "prayer") {
+    box.placeholder = "Share your prayer request...";
+  }
+
+  if (mode === "talk") {
+    box.placeholder = "You can speak freely here...";
+  }
+
+  if (mode === "question") {
+    box.placeholder = "What would you like to ask?";
+  }
+}
+
+function sendMessage() {
+  const box = document.getElementById("messageBox");
+  const confirm = document.getElementById("confirmation");
+
+  if (!box.value.trim()) return;
+
+  confirm.textContent = "Your message has been received. You are not alone.";
+
+  box.value = "";
+}
+</script>
 </body>
 </html>
