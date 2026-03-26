@@ -595,3 +595,7 @@ main.container{
   padding-top:30px;
   padding-bottom:30px;
 }
+.devotion-card h3,
+.story-card h3{
+  margin-top:0;
+}
