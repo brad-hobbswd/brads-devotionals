@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Closing Thoughts | Whispers in the Pew</title>
+<meta name="description" content="Final reflections encouraging continued listening to the Spirit and walking daily with Jesus.">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../favicon.ico">
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/images/logo-256.png">
+      <span>Whispers in the Pew</span>
+    </a>
+    <nav class="links">
+      <a href="index.html">Devotions</a>
+      <a href="../prayer-room.html">Prayer Room</a>
+      <a href="../about.html">About</a>
+      <a href="../store.html">Store</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-small" style="background:
+linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+url('../assets/images/appalachian-hero.jpg');">
+  <div class="hero-inner">
+    <h1 class="h1">Closing Thoughts</h1>
+  </div>
+</section>
+
+<main class="container">
+
+  <article class="panel prose">
+
+    <p>
+      This book is not the end. It was never meant to be. The truth is, if we stop at the last page, we risk missing what the Lord is still speaking. The same Spirit that stirred me to write these devotions is the same Spirit that wants to keep speaking into your life day by day, moment by moment.
+    </p>
+
+    <p>
+      The Word says, “He who has an ear, let him hear what the Spirit says to the churches.” That includes you and me. We are at the church. And what He whispers in your spirit will always reach deeper than any story or lesson I could write.
+    </p>
+
+    <p>
+      I’ve shared my tears, my silence, my search, and my hope. But my prayer is that these words will only point you back to the voice that has carried me, His voice. Don’t close this book as if it’s the end of the conversation. Instead, let it remind you to keep your ear tuned to Him.
+    </p>
+
+    <p>
+      Your journey is still being written by the Lord. Let every devotion you’ve read here be a marker, a testimony, but never the finish line. Keep listening. Keep seeking. And keep trusting that what the Spirit speaks to you personally will always lead you closer to Him.
+    </p>
+
+    <p>
+      And this is not my end either. The Lord is stirring me to continue writing. My next book will be a more private and personal walk with Him, sharing deeper reflections and lessons from this journey. I’m also excited about writing a devotional for children, building on the stories and lessons I’ve created for infants and toddlers. Until then, may you walk daily with the Spirit, who is faithful to lead you into all that God has planned.
+    </p>
+
+  </article>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Whispers in the Pew</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+});
+</script>
+
+<script>
+document.addEventListener("keydown", function(e) {
+  if (
+    (e.ctrlKey && e.key === "c") ||
+    (e.ctrlKey && e.key === "x") ||
+    (e.ctrlKey && e.key === "u") ||
+    (e.ctrlKey && e.key === "s")
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+
+<script>
+(function(){
+  function enableBookMode(){
+    document.querySelectorAll("header, footer, .nav")
+      .forEach(el => el.remove());
+
+    document.body.style.background = "#080604";
+    document.body.style.color = "#f4e7cf";
+    document.body.style.margin = "0";
+    document.body.style.padding = "40px 30px";
+    document.body.style.maxWidth = "700px";
+    document.body.style.margin = "0 auto";
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  if(params.get("book") === "true"){
+    enableBookMode();
+  }
+})();
+</script>
+
+</body>
+</html>
