@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resource | Whispers in the Pew</title>
+<meta name="description" content="Scriptures, declarations, and resources for speaking the name of Jesus, healing, and walking in authority.">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../favicon.ico">
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/images/logo-256.png">
+      <span>Whispers in the Pew</span>
+    </a>
+    <nav class="links">
+      <a href="index.html">Devotions</a>
+      <a href="../prayer-room.html">Prayer Room</a>
+      <a href="../about.html">About</a>
+      <a href="../store.html">Store</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-small" style="background:
+linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+url('../assets/images/appalachian-hero.jpg');">
+  <div class="hero-inner">
+    <h1 class="h1">Resource</h1>
+    <p class="tagline">For Speaking the Name of Jesus, Healing from Rejection, and Walking in Authority</p>
+  </div>
+</section>
+
+<main class="container">
+
+  <article class="panel prose">
+
+    <p>
+      “For God is not unrighteous to forget or overlook your labor and the love which you have shown for His name’s sake in ministering to the needs of the saints (His own consecrated people), as you still do.” Hebrews 6:10
+    </p>
+
+    <h3>Primary Bible Translation</h3>
+    <p>
+      Amplified Bible, Classic Edition (AMPC)<br>
+      This version is used throughout the devotional. Its expanded text reveals deeper meanings in Scripture, helping readers meditate on the full richness of God’s promises and commands.
+    </p>
+
+    <h3>Key Scriptures Used in This Book</h3>
+
+    <h4>Power in the Name of Jesus</h4>
+    <p>
+      · Philippians 2:9-11 His name is above every name.<br>
+      · John 14:13-14 Ask in My name and I will do it.<br>
+      · Acts 3:6 / 4:12 Salvation and healing through His name.<br>
+      · Mark 16:17-18 In My name they will cast out demons.
+    </p>
+
+    <h4>Healing from Rejection and Shame</h4>
+    <p>
+      · Isaiah 61:7 Instead of your shame, a double portion.<br>
+      · Psalm 27:10 Though my father and mother forsake me…<br>
+      · Jeremiah 1:5-9 Called before birth; do not be silent.<br>
+      · 1 Corinthians 1:27-29 God uses the rejected and overlooked.
+    </p>
+
+    <h4>Spiritual Identity and Authority</h4>
+    <p>
+      · Luke 10:19 I give you authority… nothing shall harm you.<br>
+      · Romans 8:1 No condemnation for those in Christ.<br>
+      · Colossians 2:15 He disarmed the rulers and authorities.<br>
+      · Ephesians 2:6 You are seated with Christ in heavenly places.
+    </p>
+
+    <h3>Declarations to Speak the Name of Jesus</h3>
+    <p>
+      These are meant to be spoken aloud. Each declaration is rooted in Scripture (AMPC):
+    </p>
+
+    <p>
+      “In the name of Jesus, I renounce every lie spoken over my life and call forth truth. I am not disqualified; I am chosen.”
+    </p>
+
+    <p>
+      “I speak the name of Jesus into the silence that was forced on me. I will not be quiet about what God has done.”
+    </p>
+
+    <p>
+      “Jesus, Your name covers every shame, heals every wound, and breaks every chain; spoken or unspoken.”
+    </p>
+
+    <h3>Author’s Encouragement</h3>
+    <p>
+      If you’ve ever been told you're too broken to be used by God, this devotional is proof that you’re not. What once disqualified you has become the very proof of God’s power in your life.
+      Speak the name of Jesus and speak again. You are not silent. You are not forgotten. You are His.
+    </p>
+
+  </article>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Whispers in the Pew</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+});
+</script>
+
+<script>
+document.addEventListener("keydown", function(e) {
+  if (
+    (e.ctrlKey && e.key === "c") ||
+    (e.ctrlKey && e.key === "x") ||
+    (e.ctrlKey && e.key === "u") ||
+    (e.ctrlKey && e.key === "s")
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+
+<script>
+(function(){
+  function enableBookMode(){
+    document.querySelectorAll("header, footer, .nav")
+      .forEach(el => el.remove());
+
+    document.body.style.background = "#080604";
+    document.body.style.color = "#f4e7cf";
+    document.body.style.margin = "0";
+    document.body.style.padding = "40px 30px";
+    document.body.style.maxWidth = "700px";
+    document.body.style.margin = "0 auto";
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  if(params.get("book") === "true"){
+    enableBookMode();
+  }
+})();
+</script>
+
+</body>
+</html>
