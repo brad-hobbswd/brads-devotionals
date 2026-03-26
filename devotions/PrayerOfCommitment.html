@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prayer of Commitment | Whispers in the Pew</title>
+<meta name="description" content="A prayer of surrender, commitment, and walking daily with Jesus.">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../favicon.ico">
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/images/logo-256.png">
+      <span>Whispers in the Pew</span>
+    </a>
+    <nav class="links">
+      <a href="index.html">Devotions</a>
+      <a href="../prayer-room.html">Prayer Room</a>
+      <a href="../about.html">About</a>
+      <a href="../store.html">Store</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-small" style="background:
+linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+url('../assets/images/appalachian-hero.jpg');">
+  <div class="hero-inner">
+    <h1 class="h1">Prayer of Commitment</h1>
+  </div>
+</section>
+
+<main class="container">
+
+  <article class="panel prose">
+
+    <p>
+      Lord Jesus, I come before You with an open heart, ready to seek You as You have called me to. I commit my life, my struggles, my silence, and my tears into Your hands. Teach me to listen to Your Spirit, to follow Your truth, and to walk in the path You have prepared for me.
+    </p>
+
+    <p>
+      Help me to take the lessons I’ve learned through this devotional and apply them daily; to trust You in every moment, to find strength when I am weak, and to keep seeking Your guidance even when the way is unclear.
+    </p>
+
+    <p>
+      I commit to living a life of faith, hope, and obedience, knowing that Your Word is a lamp to my feet and a light to my path. Lord, let Your Spirit continue to speak to me, guide me, and remind me that I am never alone, even in my quietest, hardest seasons.
+    </p>
+
+    <p>
+      I surrender my story to You, trusting that You can use it to glorify Your Name and to encourage others who may walk similar paths. May my life reflect Your love, Your truth, and Your grace.
+    </p>
+
+    <p>
+      In Jesus’ Name, Amen.
+    </p>
+
+  </article>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Whispers in the Pew</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+});
+</script>
+
+<script>
+document.addEventListener("keydown", function(e) {
+  if (
+    (e.ctrlKey && e.key === "c") ||
+    (e.ctrlKey && e.key === "x") ||
+    (e.ctrlKey && e.key === "u") ||
+    (e.ctrlKey && e.key === "s")
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+
+<script>
+(function(){
+  function enableBookMode(){
+    document.querySelectorAll("header, footer, .nav")
+      .forEach(el => el.remove());
+
+    document.body.style.background = "#080604";
+    document.body.style.color = "#f4e7cf";
+    document.body.style.margin = "0";
+    document.body.style.padding = "40px 30px";
+    document.body.style.maxWidth = "700px";
+    document.body.style.margin = "0 auto";
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  if(params.get("book") === "true"){
+    enableBookMode();
+  }
+})();
+</script>
+
+</body>
+</html>
