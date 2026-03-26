@@ -3,7 +3,7 @@ Whispers in the Pew site files
 Upload every file inside this folder to the GitHub repo brads-devotionals.
 
 That website is 
-https://brad-hobbswd.github.io/brads-devotionals/
+https://brad-hobbswd.github.io/whispers-in-the-pew/
 
 GitHub Pages
 Settings
