@@ -599,3 +599,6 @@ main.container{
 .story-card h3{
   margin-top:0;
 }
+.panel h3:first-child{
+  margin-top:0;
+}
