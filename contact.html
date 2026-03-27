@@ -127,10 +127,18 @@ function setMode(mode) {
 }
 </script>
 <script>
+<script>
 function handleSubmit(e) {
   e.preventDefault();
 
   const form = e.target;
+
+  // 👇 set local time before sending
+  const timeField = document.getElementById("localTime");
+  if (timeField) {
+    const now = new Date();
+    timeField.value = now.toLocaleString();
+  }
 
   fetch(form.action, {
     method: "POST",
@@ -144,6 +152,7 @@ function handleSubmit(e) {
     alert("Something went wrong. Please try again.");
   });
 }
+</script>
 </script>
 </body>
 </html>
