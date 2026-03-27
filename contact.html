@@ -120,17 +120,6 @@ function setMode(mode) {
     box.placeholder = "What would you like to ask?";
   }
 }
-
-function sendMessage() {
-  const box = document.getElementById("messageBox");
-  const confirm = document.getElementById("confirmation");
-
-  if (!box.value.trim()) return;
-
-  confirm.textContent = "Your message has been received. You are not alone.";
-
-  box.value = "";
-}
 </script>
 </body>
 </html>
