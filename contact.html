@@ -54,7 +54,7 @@
     <button class="btn" onclick="setMode('question')">I have a question</button>
   </div>
 
-  <form action="https://formspree.io/f/mzdajjkb" method="POST">
+  <form action="https://formspree.io/f/mzdajjkb" method="POST" onsubmit="handleSubmit(event)">
 
   <textarea name="message" id="messageBox" placeholder="Share what is on your heart..." required></textarea>
 
@@ -126,6 +126,25 @@ function setMode(mode) {
   if (mode === "question") {
     box.placeholder = "What would you like to ask?";
   }
+}
+</script>
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+
+  const form = e.target;
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(() => {
+    window.location.href = "https://brad-hobbswd.github.io/whispers-in-the-pew/thank-you.html";
+  }).catch(() => {
+    alert("Something went wrong. Please try again.");
+  });
 }
 </script>
 </body>
