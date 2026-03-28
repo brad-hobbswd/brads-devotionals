@@ -12,21 +12,7 @@
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 </head>
 <body>
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="Home">
-      <img src="assets/images/logo-256.png" alt="Whispers in the Pew">
-      <span>Whispers in the Pew</span>
-    </a>
-    <nav class="links" aria-label="Primary">
-      <a href="devotions/index.html">Devotions</a>
-      <a href="prayer-room.html">Prayer Room</a>
-      <a href="about.html">About</a>
-      <a href="store.html">Store</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<div id="header"></div>
 <section class="hero-small" style="background:
   linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
   url('assets/images/appalachian-hero.jpg');">
@@ -76,82 +62,8 @@
   </div>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <p>© 2026 Whispers in the Pew</p>
-  </div>
-</footer>
+<div id="footer"></div>
 
-<script>
-document.addEventListener("contextmenu", function(e){
-  e.preventDefault();
-});
-</script>
-
-<script>
-document.addEventListener("keydown", function(e) {
-  if (
-    (e.ctrlKey && e.key === "c") ||
-    (e.ctrlKey && e.key === "x") ||
-    (e.ctrlKey && e.key === "u") ||
-    (e.ctrlKey && e.key === "s")
-  ) {
-    e.preventDefault();
-  }
-});
-</script>
-  <script>
-function setMode(mode) {
-  currentMode = mode;
-
-  const box = document.getElementById("messageBox");
-  const typeField = document.getElementById("messageType");
-
-  if (typeField) {
-    if (mode === "prayer") typeField.value = "I need prayer";
-    if (mode === "talk") typeField.value = "I need to talk";
-    if (mode === "question") typeField.value = "I have a question";
-  }
-
-  if (mode === "prayer") {
-    box.placeholder = "Share your prayer request...";
-  }
-
-  if (mode === "talk") {
-    box.placeholder = "You can speak freely here...";
-  }
-
-  if (mode === "question") {
-    box.placeholder = "What would you like to ask?";
-  }
-}
-</script>
-<script>
-
-function handleSubmit(e) {
-  e.preventDefault();
-
-  const form = e.target;
-
-  // 👇 set local time before sending
-  const timeField = document.getElementById("localTime");
-  if (timeField) {
-    const now = new Date();
-    timeField.value = now.toLocaleString();
-  }
-
-  fetch(form.action, {
-    method: "POST",
-    body: new FormData(form),
-    headers: {
-      'Accept': 'application/json'
-    }
-  }).then(() => {
-    window.location.href = "https://brad-hobbswd.github.io/whispers-in-the-pew/thank-you.html";
-  }).catch(() => {
-    alert("Something went wrong. Please try again.");
-  });
-}
-</script>
+  <script src="/whispers-in-the-pew/script.js"></script>
 </body>
 </html>
