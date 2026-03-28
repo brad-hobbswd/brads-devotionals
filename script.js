@@ -1,4 +1,26 @@
-/* Navigation */
+/* =========================
+   LOAD HEADER + FOOTER
+========================= */
+function loadPartials() {
+  fetch('/whispers-in-the-pew/partials/header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+
+      // IMPORTANT: run AFTER header loads
+      setActiveNav();
+    });
+
+  fetch('/whispers-in-the-pew/partials/footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+}
+
+/* =========================
+   NAVIGATION
+========================= */
 function navigateTo(page) {
   switch(page) {
     case 'home':
@@ -19,7 +41,9 @@ function navigateTo(page) {
   }
 }
 
-/* Active nav highlight */
+/* =========================
+   ACTIVE NAV HIGHLIGHT
+========================= */
 function setActiveNav() {
   const path = window.location.pathname;
 
@@ -35,6 +59,10 @@ function setActiveNav() {
     document.getElementById('nav-home')?.classList.add('active');
   }
 }
+
+/* =========================
+   INTERACTION LOCKS
+========================= */
 
 /* Disable right click */
 document.addEventListener("contextmenu", function(e){
@@ -53,5 +81,9 @@ document.addEventListener("keydown", function(e) {
   }
 });
 
-/* Run on load */
-document.addEventListener('DOMContentLoaded', setActiveNav);
+/* =========================
+   INIT
+========================= */
+document.addEventListener('DOMContentLoaded', () => {
+  loadPartials();
+});
