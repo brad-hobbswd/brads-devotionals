@@ -132,3 +132,107 @@ function handleSubmit(e) {
     alert("Something went wrong. Please try again.");
   });
 }
+
+/* =========================
+   PRAYER ROOM LOGIC
+========================= */
+
+let timerRunning = false;
+
+function startPrayerFlow() {
+  const startBtn = document.querySelector("#start button");
+  if (startBtn) startBtn.style.display = "none";
+
+  document.getElementById("step1")?.classList.remove("hidden");
+
+  setTimeout(() => {
+    document.getElementById("step2")?.classList.remove("hidden");
+  }, 2000);
+
+  setTimeout(() => {
+    document.getElementById("step3")?.classList.remove("hidden");
+  }, 4000);
+}
+
+function savePrayer(text) {
+  let prayers = JSON.parse(localStorage.getItem("prayers")) || [];
+
+  prayers.unshift({
+    text: text,
+    time: new Date().toLocaleString()
+  });
+
+  localStorage.setItem("prayers", JSON.stringify(prayers));
+}
+
+function loadPrayers() {
+  const container = document.getElementById("savedPrayers");
+  if (!container) return;
+
+  let prayers = JSON.parse(localStorage.getItem("prayers")) || [];
+
+  container.innerHTML = "";
+
+  prayers.slice(0, 5).forEach(p => {
+    let div = document.createElement("div");
+    div.style.marginBottom = "12px";
+    div.style.padding = "10px";
+    div.style.border = "1px solid rgba(200,168,90,.2)";
+    div.style.borderRadius = "8px";
+    div.style.color = "var(--muted)";
+
+    div.innerHTML = `
+      <div style="font-size:.85rem; opacity:.6;">${p.time}</div>
+      <div>${p.text}</div>
+    `;
+
+    container.appendChild(div);
+  });
+}
+
+function releasePrayer() {
+  const box = document.getElementById("prayerBox");
+  if (!box || !box.value.trim()) return;
+
+  savePrayer(box.value);
+
+  box.classList.add("fade-out");
+
+  setTimeout(() => {
+    box.value = "";
+    box.classList.remove("fade-out");
+    document.getElementById("step4")?.classList.remove("hidden");
+
+    loadPrayers();
+  }, 2000);
+}
+
+function startSilence(seconds) {
+  if (timerRunning) return;
+  timerRunning = true;
+
+  let timerDisplay = document.getElementById("timer");
+  let time = seconds;
+
+  let interval = setInterval(() => {
+    if (timerDisplay) {
+      timerDisplay.textContent = time + " seconds remaining";
+    }
+
+    time--;
+
+    if (time < 0) {
+      clearInterval(interval);
+      if (timerDisplay) timerDisplay.textContent = "Time complete.";
+      document.getElementById("end")?.classList.remove("hidden");
+      timerRunning = false;
+    }
+  }, 1000);
+}
+
+/* Run only if prayer page elements exist */
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.getElementById("savedPrayers")) {
+    loadPrayers();
+  }
+});
