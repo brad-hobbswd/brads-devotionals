@@ -52,22 +52,18 @@
 }
 
 /* ===== ACCENT LINE ===== */
-.store-card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  height:3px;
-  width:100%;
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
-  opacity:.8;
+.store-card{
+  background:var(--panel2);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:18px;
+
+  transition:transform .35s ease, box-shadow .35s ease;
 }
 
-/* ===== HOVER ===== */
 .store-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 40px rgba(0,0,0,.25);
-  border:1px solid rgba(255,255,255,.25);
+  transform:translateY(-3px);
+  box-shadow:0 12px 35px rgba(200,168,90,.14);
 }
 
 /* ===== CONTENT ===== */
@@ -169,7 +165,7 @@
         </p>
       </div>
       <div class="card-footer">
-        <a class="card-btn" href="https://brad-hobbswd.github.io/love-that-covers/" target="_blank" rel="noopener noreferrer">
+        <a class="btn" href="https://brad-hobbswd.github.io/love-that-covers/" target="_blank" rel="noopener noreferrer">
           Explore Book
         </a>
       </div>
@@ -183,7 +179,7 @@
         </p>
       </div>
       <div class="card-footer">
-        <a class="card-btn" href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/" target="_blank" rel="noopener noreferrer">
+        <a class="btn" href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/" target="_blank" rel="noopener noreferrer">
           Affirm & Read
         </a>
       </div>
@@ -197,7 +193,7 @@
         </p>
       </div>
       <div class="card-footer">
-        <a class="card-btn" href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/" target="_blank" rel="noopener noreferrer">
+        <a class="btn" href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/" target="_blank" rel="noopener noreferrer">
           Read Journey
         </a>
       </div>
@@ -211,7 +207,7 @@
         </p>
       </div>
       <div class="card-footer">
-        <a class="card-btn" href="https://brad-hobbswd.github.io/about-me/" target="_blank" rel="noopener noreferrer">
+        <a class="btn" href="https://brad-hobbswd.github.io/about-me/" target="_blank" rel="noopener noreferrer">
           Read Reflections
         </a>
       </div>
@@ -225,7 +221,7 @@
         </p>
       </div>
       <div class="card-footer">
-        <a class="card-btn" href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank" rel="noopener noreferrer">
+        <a class="btn" href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank" rel="noopener noreferrer">
           View Portfolio
         </a>
       </div>
@@ -239,7 +235,7 @@
         </p>
       </div>
       <div class="card-footer">
-        <a class="card-btn" href="https://www.bapbi.net" target="_blank" rel="noopener noreferrer">
+        <a class="btn" href="https://www.bapbi.net" target="_blank" rel="noopener noreferrer">
           Visit Website
         </a>
       </div>
@@ -257,7 +253,7 @@
         </p>
       </div>
       <div class="card-footer">
-        <a class="card-btn" href="https://www.mercyforyou.org" target="_blank" rel="noopener noreferrer">
+        <a class="btn" href="https://www.mercyforyou.org" target="_blank" rel="noopener noreferrer">
           Visit Church
         </a>
       </div>
